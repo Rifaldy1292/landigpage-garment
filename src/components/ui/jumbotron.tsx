@@ -1,4 +1,3 @@
-import React from "react";
 import bgDunia from "../../assets/bg-dunia.jpeg";
 const Jumbotron = () => {
   return (

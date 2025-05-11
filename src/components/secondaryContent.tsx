@@ -13,7 +13,6 @@ import logo5 from "../assets/logo-upn.jpeg";
 import { Link } from "react-router-dom"; // Ganti dengan path logo perusahaan kamu
 
 const SecondaryContent = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
   const clients = [
     {
       name: "Client 1",

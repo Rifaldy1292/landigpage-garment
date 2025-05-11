@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom"; // Ganti dengan path logo perusahaan kamu
 // Jika pakai shadcn UI, sesuaikan jika tidak
 import tentangKami from "../../assets/tentang-kami.jpg";

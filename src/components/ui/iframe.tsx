@@ -1,5 +1,3 @@
-import React from "react";
-
 const YouTubeVideo = () => {
   return (
     <div className="relative w-full z-10 max-w-full pb-[56.25%] overflow-hidden">
