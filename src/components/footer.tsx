@@ -1,4 +1,3 @@
-import React from "react";
 import logoPerusahaan from "../assets/logo-perusahaan.jpg";
 import { Link } from "react-router-dom"; // Ganti dengan path logo perusahaan kamu
 const Footer = () => {
