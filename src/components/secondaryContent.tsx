@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-import { useState } from "react";
 import Jumbotron from "./ui/jumbotron";
 import BusinessJumbotron from "./ui/businessJumbotron";
 import Footer from "./footer";
