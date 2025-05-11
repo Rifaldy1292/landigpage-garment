@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { div } from "framer-motion/client";
-import React from "react";
+
 import galeriFoto from "../assets/galeri-foto.jpg";
 import { useEffect } from "react";
 const AboutMe = () => {

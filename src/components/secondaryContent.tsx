@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Carousel from "./ui/caresoul";
+
 import { useState } from "react";
 import Jumbotron from "./ui/jumbotron";
 import BusinessJumbotron from "./ui/businessJumbotron";
@@ -9,7 +9,7 @@ import logo2 from "../assets/logo-shelter.jpg";
 import logo3 from "../assets/logo-polda-jatim.jpeg";
 import logo4 from "../assets/logo-delta-surya.jpeg";
 import logo5 from "../assets/logo-upn.jpeg";
-import logo6 from "../assets/logo-rs-bhayangkara.jpeg";
+
 import { Link } from "react-router-dom"; // Ganti dengan path logo perusahaan kamu
 
 const SecondaryContent = () => {
