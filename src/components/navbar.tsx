@@ -23,32 +23,27 @@ import {
   HeartFilledIcon,
   SearchIcon,
 } from "@/components/icons";
-import { Logo } from "@/components/icons";
+import Logo from "../assets/logo-perusahaan.jpg";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion"; // Import motion
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+  const location = useLocation();
+  console.log(location.pathname);
+
+  // Animasi untuk menu item dan logo
+  const logoAnimation = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  };
+
+  const menuItemAnimation = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  };
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="xl" position="sticky " className="fixed z-50">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <Link
@@ -56,87 +51,54 @@ export const Navbar = () => {
             color="foreground"
             href="/"
           >
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <motion.img // Apply motion to logo
+              src={Logo}
+              alt=""
+              className="w-[50px]"
+              initial="initial"
+              animate="animate"
+              variants={logoAnimation}
+            />
+            <motion.p // Apply motion to text
+              className="font-bold ml-5 text-[#1357D8] hidden sm:block"
+              initial="initial"
+              animate="animate"
+              variants={logoAnimation}
+            >
+              Garment Semeru Collection
+            </motion.p>
           </Link>
         </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <Link
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            </NavbarItem>
-          ))}
-        </div>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} title="Twitter">
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.discord} title="Discord">
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500" />
-          </Link>
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-        <NavbarItem className="hidden md:flex">
-          <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
-          >
-            Sponsor
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
+      <NavbarContent className="basis-1 pl-4" justify="end">
+        <NavbarMenuToggle className="" />
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
+          {siteConfig.navMenuItems.map((item, index) => {
+            const isActive = location.pathname === item.href;
+
+            return (
+              <motion.div // Apply motion to each menu item
+                key={`${item}-${index}`}
+                initial="initial"
+                animate="animate"
+                variants={menuItemAnimation}
               >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+                <NavbarMenuItem>
+                  <Link
+                    color={isActive ? "primary" : "foreground"}
+                    href={item.href}
+                    size="lg"
+                  >
+                    {item.label}
+                  </Link>
+                </NavbarMenuItem>
+              </motion.div>
+            );
+          })}
         </div>
       </NavbarMenu>
     </HeroUINavbar>
