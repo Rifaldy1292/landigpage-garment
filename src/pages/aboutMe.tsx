@@ -69,7 +69,6 @@ const AboutMe = () => {
           </div>
         </div>
 
-        {/* Founder and Co-Founder Section */}
         <div className="max-w-7xl mx-auto mt-16 px-6 text-center">
           <h2 className="text-3xl font-semibold text-gray-800">Tim Kami</h2>
           <p className="mt-4 text-lg text-gray-600">
