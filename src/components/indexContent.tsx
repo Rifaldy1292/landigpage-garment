@@ -117,31 +117,33 @@ const IndexContent = () => {
           animate="animate"
           variants={videoModalAnimation}
         >
-          <div className="relative w-full max-w-4xl h-full p-4">
+          <div className="relative w-full z-50 items-center max-w-4xl h-full p-4">
             {/* Close Button */}
-            <button
-              className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-700 focus:outline-none"
-              onClick={handleVideoClickClose}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
 
             {/* YouTube Video */}
-            <div className="w-full h-full flex justify-center items-center">
+            <div className="w-full h-[100px] flex   mt-20 ">
               <YouTubeVideo />
+              <div className="h-full">
+                <button
+                  className=" text-white  bg-gray-800 rounded-full p-2 hover:bg-gray-700 focus:outline-none"
+                  onClick={handleVideoClickClose}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>
