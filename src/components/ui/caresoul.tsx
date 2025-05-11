@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardBody, Image } from "@heroui/react";
 import caresoul1 from "../../assets/caresoul-1.jpg";
 import caresoul2 from "../../assets/caresoul-2.jpg";
