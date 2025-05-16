@@ -1,5 +1,4 @@
 import { Link } from "@heroui/link";
-
 import {
   Navbar as HeroUINavbar,
   NavbarBrand,
@@ -8,18 +7,14 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@heroui/navbar";
-
 import { siteConfig } from "@/config/site";
-
 import Logo from "../assets/logo-perusahaan.jpg";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const location = useLocation();
-  console.log(location.pathname);
 
-  // Animasi untuk menu item dan logo
   const logoAnimation = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -32,6 +27,7 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar maxWidth="xl" position="sticky" className="fixed z-50">
+      {/* Kiri: Brand */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <Link
@@ -39,7 +35,7 @@ export const Navbar = () => {
             color="foreground"
             href="/"
           >
-            <motion.img // Apply motion to logo
+            <motion.img
               src={Logo}
               alt=""
               className="w-[50px]"
@@ -47,7 +43,7 @@ export const Navbar = () => {
               animate="animate"
               variants={logoAnimation}
             />
-            <motion.p // Apply motion to text
+            <motion.p
               className="font-bold ml-5 text-[#1357D8] hidden sm:block"
               initial="initial"
               animate="animate"
@@ -59,17 +55,44 @@ export const Navbar = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="basis-1 pl-4" justify="end">
-        <NavbarMenuToggle className="" />
+      {/* Tengah (Menu Desktop) */}
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {siteConfig.navMenuItems.map((item, index) => {
+          const isActive = location.pathname === item.href;
+          return (
+            <motion.div
+              key={`${item}-${index}`}
+              initial="initial"
+              animate="animate"
+              variants={menuItemAnimation}
+            >
+              <Link
+                color={isActive ? "primary" : "foreground"}
+                href={item.href}
+                size="lg"
+                className={`relative px-3 py-2 text-lg font-medium transition-colors duration-300 ${
+                  isActive ? "text-[#1357D8]" : "text-gray-700"
+                } hover:text-[#1357D8]`}
+              >
+                {item.label}
+              </Link>
+            </motion.div>
+          );
+        })}
       </NavbarContent>
 
+      {/* Kanan: Toggle untuk mobile */}
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle />
+      </NavbarContent>
+
+      {/* Menu Mobile */}
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => {
             const isActive = location.pathname === item.href;
-
             return (
-              <motion.div // Apply motion to each menu item
+              <motion.div
                 key={`${item}-${index}`}
                 initial="initial"
                 animate="animate"

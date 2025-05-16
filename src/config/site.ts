@@ -17,6 +17,10 @@ export const siteConfig = {
       label: "Pelayanan",
       href: "/pelayanan",
     },
+    {
+      label: "catalog",
+      href: "/catalog",
+    },
 
     {
       label: "Hubungi kami",
