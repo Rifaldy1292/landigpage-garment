@@ -36,6 +36,7 @@ import waerpack from "../assets/catalog2/wearpack.png";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useEffect } from "react";
+import sabukCople from "../assets/catalog/sabuk-cople.png";
 const dataKatalog = [
   {
     id: 1,
@@ -206,7 +207,7 @@ const dataKatalog = [
     id: 12,
     nama: "Seragam Polisi Set PD SUS",
     deskripsi: "Seragam berkualitas untuk industri profesional.",
-    gambar: seragamSatpamPdl,
+    gambar: seragamPolisi,
     detail: {
       hargaSet: "Rp.580.000.- ",
       hargaAtasan: "-",
@@ -221,7 +222,7 @@ const dataKatalog = [
     id: 13,
     nama: "Seragam Polisi SAFARI Set Pendek",
     deskripsi: "Seragam berkualitas untuk industri profesional.",
-    gambar: seragamSatpamPdl,
+    gambar: seragamPolisi,
     detail: {
       hargaSet: "Rp. 400.000 .- ",
       hargaAtasan: "-",
@@ -354,10 +355,10 @@ const dataKatalog = [
     },
   },
   {
-    id: 22,
-    nama: "Aksesoris Satpam",
+    id: 24,
+    nama: "Talikur",
     deskripsi: "Seragam berkualitas untuk industri profesional.",
-    gambar: seragamSatpamPdl,
+    gambar: talikur,
     detail: {
       hargaSet: "Rp.11.000.- ",
       hargaAtasan: "-",
@@ -383,21 +384,7 @@ const dataKatalog = [
       catatan: "-",
     },
   },
-  {
-    id: 24,
-    nama: "Talikur",
-    deskripsi: "Seragam berkualitas untuk industri profesional.",
-    gambar: talikur,
-    detail: {
-      hargaSet: "Rp.11.000.- ",
-      hargaAtasan: "-",
-      hargaCelana: "-",
-      diskonMember: "5-10%",
-      stock: 10,
-      ketersediaan: "Ready Stock and By Order",
-      catatan: "-",
-    },
-  },
+
   {
     id: 25,
     nama: "Topi POL PP",
@@ -598,7 +585,7 @@ const dataKatalog = [
     id: 38,
     nama: "Sabuk Kopel",
     deskripsi: "Seragam berkualitas untuk industri profesional.",
-    gambar: seragamSatpamPdl,
+    gambar: sabukCople,
     detail: {
       hargaSet: "Rp.135.000.-",
       hargaAtasan: "-",
