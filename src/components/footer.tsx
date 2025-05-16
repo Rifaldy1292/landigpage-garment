@@ -21,7 +21,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/pelayanan" className="hover:text-white">
+              <Link to="/tentang-kami" className="hover:text-white">
                 {" "}
                 Tentang Kami
               </Link>
@@ -48,24 +48,24 @@ const Footer = () => {
           <h4 className="font-semibold text-white mb-4">Layanan Kami</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/pelayanan" className="hover:text-white">
                 Seragam Kerja Semeru
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/pelayanan" className="hover:text-white">
                 Penjualan Textile
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/pelayanan" className="hover:text-white">
                 Divisi D325
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link to="/pelayanan" className="hover:text-white">
                 Divisi Aksesoris & bordir
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
