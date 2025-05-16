@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardFooter, Image } from "@heroui/react";
+import { Card, CardBody, Image } from "@heroui/react";
 import { motion } from "framer-motion";
 import seragamSatpamPdl from "../assets/catalog/seragam-satpam-pdl.png";
 import seragamSatpamPdh from "../assets/catalog/seragam-satpam-pdh.png";
