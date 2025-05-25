@@ -3,11 +3,12 @@ import { Card, CardBody, Image } from "@heroui/react";
 import caresoul1 from "../../assets/caresoul-1.jpg";
 import caresoul2 from "../../assets/caresoul-2.jpg";
 import caresoul3 from "../../assets/caresoul-3.jpg";
+import caresoul4 from "../../assets/logo-perusahaan.jpg";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const images = [caresoul1, caresoul2, caresoul3];
+  const images = [caresoul1, caresoul2, caresoul3, caresoul4];
 
   // Auto slide setiap 3 detik
   useEffect(() => {

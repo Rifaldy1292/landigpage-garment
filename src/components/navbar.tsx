@@ -44,7 +44,7 @@ export const Navbar = () => {
               variants={logoAnimation}
             />
             <motion.p
-              className="font-bold ml-5 text-[#1357D8] hidden sm:block"
+              className="font-bold ml-5 text-[#1357D8] hidden lg:block"
               initial="initial"
               animate="animate"
               variants={logoAnimation}

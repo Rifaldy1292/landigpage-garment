@@ -8,6 +8,8 @@ import logo2 from "../assets/logo-shelter.jpg";
 import logo3 from "../assets/logo-polda-jatim.jpeg";
 import logo4 from "../assets/logo-delta-surya.jpeg";
 import logo5 from "../assets/logo-upn.jpeg";
+import logo6 from "../assets/ubm-sidoarjo.png";
+import logo7 from "../assets/ars-sidoarjo.png";
 
 import { Link } from "react-router-dom"; // Ganti dengan path logo perusahaan kamu
 
@@ -35,23 +37,23 @@ const SecondaryContent = () => {
     },
     {
       name: "Client 4",
-      logo: "https://placehold.co/600x400",
+      logo: logo6,
     },
     {
       name: "Client 5",
-      logo: "https://placehold.co/600x400",
+      logo: logo7,
     },
     {
       name: "Client 4",
-      logo: "https://placehold.co/600x400",
+      logo: logo5,
     },
     {
       name: "Client 5",
-      logo: "https://placehold.co/600x400",
+      logo: logo3,
     },
     {
       name: "Client 5",
-      logo: "https://placehold.co/600x400",
+      logo: logo4,
     },
   ];
 

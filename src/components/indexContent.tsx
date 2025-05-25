@@ -43,7 +43,10 @@ const IndexContent = () => {
   };
 
   return (
-    <div className="relative w-full bg-[linear-gradient(340deg,_white_40%,_#1357D8_40%)] text-white mt-20">
+    <div className="relative w-full bg-[linear-gradient(340deg,_#8B4513_0%,_#1357D8_50%,_#FF0000_100%)] text-white mt-20">
+      <div className="font-extrabold mt-5 md:mt-10 mx-auto text-[38px] leading-[44px] md:text-[48px] md:leading-[56px] max-w-[520px]">
+        PT GPP MADANI
+      </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start px-6 md:px-12 lg:px-20 pt-10 md:pt-28 pb-28 md:pb-36">
         <div className="md:w-1/2 flex flex-col justify-center">
           <motion.h1
