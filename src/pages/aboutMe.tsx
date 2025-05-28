@@ -1,6 +1,8 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-
+import founder from "../assets/founder.jpg";
+import coFounder from "../assets/co-founder.jpg";
+import coFounder2 from "../assets/co-founder2.jpg";
 import galeriFoto from "../assets/galeri-foto.jpg";
 import { useEffect } from "react";
 const AboutMe = () => {
@@ -79,30 +81,43 @@ const AboutMe = () => {
             {/* Founder */}
             <div className="flex items-center bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out p-6">
               <img
-                src={galeriFoto}
+                src={founder}
                 alt="Founder"
                 className="w-48 h-48 rounded-3xl object-cover border-4 border-blue-500 mr-6"
               />
               <div className="flex flex-col">
                 <h3 className="text-2xl font-semibold text-gray-800">
-                  Founder
+                  Dirut Utama
                 </h3>
-                <p className="text-lg text-gray-600 mt-2">Nama Founder</p>
+                <p className="text-lg text-gray-600 mt-2">A.HADI.SH</p>
               </div>
             </div>
 
             {/* Co-Founder */}
+            <div className="flex items-center  bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out p-6">
+              <img
+                src={coFounder}
+                alt="Co-Founder"
+                className="w-48 h-48 rounded-3xl  object-cover object-top border-4 border-green-500 mr-6"
+              />
+              <div className="flex flex-col">
+                <h3 className="text-2xl font-semibold text-gray-800">
+                  Dirut Operasional
+                </h3>
+                <p className="text-lg text-gray-600 mt-2">DWI SIGIT SPi</p>
+              </div>
+            </div>
             <div className="flex items-center bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out p-6">
               <img
-                src={galeriFoto}
+                src={coFounder2}
                 alt="Co-Founder"
                 className="w-48 h-48 rounded-3xl object-cover border-4 border-green-500 mr-6"
               />
               <div className="flex flex-col">
                 <h3 className="text-2xl font-semibold text-gray-800">
-                  Co-Founder
+                  Dirut Sarana Prasana
                 </h3>
-                <p className="text-lg text-gray-600 mt-2">Nama Co-Founder</p>
+                <p className="text-lg text-gray-600 mt-2">BUALI SE</p>
               </div>
             </div>
           </div>
