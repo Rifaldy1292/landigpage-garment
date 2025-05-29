@@ -18,8 +18,8 @@ import caresoul14 from "../../assets/IMG-20250525-WA0014.jpg";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  const [touchStartX, setTouchStartX] = useState(null);
-  const [touchEndX, setTouchEndX] = useState(null);
+  const [touchStartX, setTouchStartX] = useState<number>(0);
+  const [touchEndX, setTouchEndX] = useState<number>(0);
 
   const images = [
     caresoul1,
@@ -48,11 +48,11 @@ const Carousel = () => {
   }, [currentIndex, isHovered]);
 
   // Deteksi swipe
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchStartX(e.targetTouches[0].clientX);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     setTouchEndX(e.targetTouches[0].clientX);
   };
 
@@ -71,8 +71,8 @@ const Carousel = () => {
     }
 
     // reset nilai swipe
-    setTouchStartX(null);
-    setTouchEndX(null);
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   return (
